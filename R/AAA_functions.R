@@ -1,0 +1,17 @@
+#Load source scripts
+
+source("R/data_extract.R")
+source("R/get_policy_info.R")
+source("R/fit_models.R")
+source("R/cum_emi_fit.R")
+source("R/mit_costs_fit.R")
+source("R/predict_utils.R")
+source("R/clean_predict.R")
+source("R/GP_residual_sampler.R")
+source("R/MC_predictors.R")
+source("R/temperature.R")
+source("R/climate_damages.R")
+source("R/gdp_grid.R")
+source("R/compute_net_gdp.R")
+source("R/compute_npv.R")
+source("R/BHM_param_bootstrap.R")

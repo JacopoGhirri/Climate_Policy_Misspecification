@@ -21,4 +21,4 @@ In case one were to be interested in just a proof of concept, and not a full rep
 - _run_ft.R_: receiving as arguments two Carbon Budgets, computes the Monte Carlo samples of GDP curves in the selected range.
 - _run_NPVs.R_: receiving as argument a discount rate (as percentage value), computes the Net Present Value of the GDP curves.
 - _SEU_RUN.R_: receiving as argument a discount rate, and ID for the desired damage configuration, and an ID for the uncertainty configuration, evaluates the climate target space according to the Subjective Expected Utility criterion.
-- _run_maxmin_momi.R: receiving as argument a discount rate, and ID for the desired damage configuration, and an ID for the uncertainty configuration, evaluates the climate target space according to MaxMin Expected Utility criterion, and different levels of Model Misspecification fear.
+- _run_maxmin_momi.R_: receiving as argument a discount rate, and ID for the desired damage configuration, and an ID for the uncertainty configuration, evaluates the climate target space according to MaxMin Expected Utility criterion, and different levels of Model Misspecification fear.

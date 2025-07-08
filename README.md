@@ -13,10 +13,10 @@ In case one were to be interested in just a proof of concept, and not a full rep
 ## STRUCTURE
 - **data**: containing original IAMs scenarios, temperature, population, and gdp data, together with *BDD2018* and *BurkeHsiangMiguel2015_Replication*, used to extract bootstrap samples of the damage function parameters, and postprocessing scripts.
 - **R**: containing the scripts used for the analysis.
-- **results**: used for storing the Monte Carlo samples of GDP curves, used in the analysis.
+- **results**: used for storing the Monte Carlo sampled GDP curves, net of costs of mitigation and climate damages.
 - **NPVS**: used for storing the NPV distribution processing of the samples in *results*.
 - **final_results**: storing the post-processed final evaluations of the decision making criteria.
-- **final_results_NOAIM**: as in *final_results*, but without the evaluation of the AIM IAM, for sensitivity in Figure 6.
+- **final_results_NOAIM**: as in *final_results*, but without the evaluation of the AIM based simulations, for sensitivity in Figure 6.
 - **plots**: containing the R scripts used to process the final results for the different visualizations, the respective csvs, and the python scripts generating the pdf figures.
 - _run_ft.R_: receiving as arguments two Carbon Budgets, computes the Monte Carlo samples of GDP curves in the selected range.
 - _run_NPVs.R_: receiving as argument a discount rate (as percentage value), computes the Net Present Value of the GDP curves.

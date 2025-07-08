@@ -3,12 +3,12 @@
 This is the code used for the analyses and figures of Ghirri J., Marinacci M., & Tavoni M. _Climate Policy under Fear of Model Misspecication_ DOI: https://doi.org/10.21203/rs.3.rs-6813235/v1
 
 ## DISCLAIMERS
-The scripts present in this repository have been executed on an HPC Cluster. The Shell scripts reflect the original configuration, for local execution one can either adapt them to work on the local machine, or directly plug in the appropriate arguments on the core R scripts.
+The scripts present in this repository have been executed on an HPC Cluster. The Shell scripts reflect the original configuration, for local execution one can either adapt them to work on the local machine, or directly write the appropriate arguments in the R scripts.
 
 Due to the high requirements (>1Tb of memory) of the full set of Monte Carlo samples, only the post processed data are reported in full, as it suffice to easily replicate the figures in the paper. 
-By launching first the _run_ft.R_ script, passing as arguments the Carbon Budget range (750-2000 is the one explored in the analysis), followed by _run_NPVs.R_, passing as argument the desired discount rate (1-5% explored in the analysis), it is possible to fully replicate the study.
+By launching first the _run_ft.R_ script, passing as two arguments the Carbon Budget range in GigaTons (750 2000 is the one explored in the analysis), followed by _run_NPVs.R_, passing as argument the desired discount rate (1-5% explored in the analysis), it is possible to fully replicate all the simulations used in the study.
 
-In case one were to be interested in just a proof of concept, and not a full replication, we recommend to edit _run_ft.R_, reducing the number of Monte Carlo samples in line 15, being the parameter _n_ passed to function _save.steps(***)_, easing the memory requirements and the computation time needed.
+In case one were to be interested in just a small scale proof of concept, and not a full replication, we recommend to edit _run_ft.R_, reducing the number of Monte Carlo samples in line 15, being the parameter _n_ passed to function _save.steps(***)_, easing the memory requirements and the computation time needed.
 
 ## STRUCTURE
 - **data**: containing original IAMs scenarios, temperature, population, and gdp data, together with *BDD2018* and *BurkeHsiangMiguel2015_Replication*, used to extract bootstrap samples of the damage function parameters, and postprocessing scripts.

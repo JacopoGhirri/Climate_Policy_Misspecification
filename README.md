@@ -5,12 +5,13 @@ This is the code used for the analyses and figures of Ghirri J., Marinacci M., &
 
 ## Requirements
 This repository can run on a standard computer, with R > 4.3.0 installed, and with enough memory and RAM to support the required operations. For a full replication of the analysis, at least 1.5 Terabytes of memory are required. Such requirement can be lowered by decreasing the number of Monte Carlo samples, or restricting the scope of the analysis by exploring a smaller range, or a more coarse grid, of Carbon Budgets.
-All the scripts have been set up to use parallelization whenever possible, compute time varies according to the parallelization capabilities of the machine being used. Using an HPC with 72+ 2.4 GHz CPUs the full simulation study requires about a week of compute time.
+
+All the scripts are set up to use parallelization where possible. On a high-performance computing (HPC) system with 72+ CPUs @ 2.4 GHz, the full simulation takes approximately 1 week.
 
 ## Disclaimer
-The scripts present in this repository have been executed on an HPC Cluster. The Shell scripts reflect the original configuration, for local execution one can either adapt them to work on the local machine, or directly write the appropriate arguments in the R scripts.
+The scripts present in this repository have been executed on an HPC Cluster. The Shell scripts reflect the original configuration. For local execution one can either adapt the shell scripts accordingly, or directly call the R scripts with the appropriate arguments.
 
-Due to the high memory requirements of the full set of Monte Carlo samples, only the post processed data are reported in full, as it suffice to easily replicate the figures in the paper. 
+Due to memory constraints, only post-processed results are shared in full. These are sufficient to replicate the figures in the paper.
 By launching first the _run_ft.R_ script, passing as two arguments the Carbon Budget range in GigaTons (750 2000 is the one explored in the analysis), followed by _run_NPVs.R_, passing as argument the desired discount rate (1-5% explored in the analysis), it is possible to fully replicate all the simulations used in the study.
 
 In case one were to be interested in just a small scale proof of concept, and not a full replication, we recommend to edit _run_ft.R_, reducing the number of Monte Carlo samples in line 15, being the parameter _n_ passed to function _save.steps(***)_, easing the memory requirements and the computation time needed.
